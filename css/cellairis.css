@@ -1,0 +1,375 @@
+/*add background image to landing page*/
+body {
+	background-image: url("../images/Cellairis_DevTest_1920-min.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+}
+
+body, html { 
+    overflow-x: hidden; 
+    overflow-y: auto;  
+}
+
+.site-container {
+	max-width: 95%;
+	margin: 0em 5em;
+
+}
+/* navigation section styling*/
+nav.menu {
+  width: 42px;
+  height: 36px;
+  float: right;
+  margin: 10px 0px 10px 0px;
+  position: relative;
+  z-index: 999;
+  cursor: pointer;
+}
+
+nav.menu div.strokes {
+  width: 100%;
+  height: 3px;
+  margin: 0 0 6px 0;
+  background: white;
+  transition: transform 0.3s, opacity 0.1s;
+}
+
+.hide {
+  opacity: 0;
+  transform: translateX(-42px);
+}
+
+.animate0 { transform: rotate(45deg) translateY(14px); }
+
+.animate2 { transform: rotate(-45deg) translateY(-14px); }
+
+.fullscreenmenu {
+  background-color: rgba(52, 152, 219, 0);
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  opacity: 0;
+  -webkit-transition: background 0.5s ease-in-out, opacity 0.5s;
+  -moz-transition: background 0.5s ease-in-out, opacity 0.5s;
+  -ms-transition: background 0.5s ease-in-out, opacity 0.5s;
+  -o-transition: background 0.5s ease-in-out, opacity 0.5s;
+  transition: background 0.5s ease-in-out, opacity 0.5s;
+  text-align: center;
+}
+
+.fullscreenmenu.show {
+  opacity: 1;
+  background-color: rgba(16, 19, 21, 0.9);
+  -webkit-transition: background 0.5s ease-in-out, visibility 0.5s;
+  -moz-transition: background 0.5s ease-in-out, visibility 0.5s;
+  -ms-transition: background 0.5s ease-in-out, visibility 0.5s;
+  -o-transition: background 0.5s ease-in-out, visibility 0.5s;
+  transition: background 0.5s ease-in-out, visibility 0.5s;
+}
+
+
+.fullscreenmenu li a {
+  font-family:"Proxima Nova";
+  visibility: inherit;
+  color: #ffffff;
+  font-size: 24px;
+  text-decoration: none;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 200%;
+}
+
+.fullscreenmenu a:hover {
+  color: #cc511a;
+  text-decoration: underline;
+}
+
+
+
+.logo_wrapper {
+float: left;
+  margin: 0;
+}
+
+main{
+/*	clear: both;*/
+	padding-top: 10px;
+}
+/*toggle buttons*/
+
+
+
+.nav {
+  -webkit-transition: left 0.5s ease;
+  -moz-transition: left 0.5s ease;
+  -ms-transition: left 0.5s ease;
+  -o-transition: left 0.5s ease;
+  transition: left 0.5s ease;
+  background: #28dde0;
+  color: white;
+  cursor: pointer;
+  font-size: 2rem;
+  height: 100vh;
+  left: -20rem;
+  padding: 6rem 2rem 2rem 2rem;
+  position: fixed;
+  top: 0;
+  width: 20rem;
+  z-index: 1;
+}
+
+.nav.expanded { left: 0; }
+
+.nav ul {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+/*animate hamburger trigger*/
+.nav-toggle {
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+  cursor: pointer;
+  height: 2rem;
+  left: 2rem;
+  position: fixed;
+  top: 2rem;
+  width: 3.6rem;
+  z-index: 1;
+}
+
+.nav-toggle:hover { opacity: 0.8; }
+
+.nav-toggle .nav-toggle-bar,  .nav-toggle .nav-toggle-bar::after,  .nav-toggle .nav-toggle-bar::before {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  -webkit-transition: all 0.5s ease;
+  -moz-transition: all 0.5s ease;
+  -ms-transition: all 0.5s ease;
+  -o-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+  background: white;
+  content: '';
+  height: 0.4rem;
+  width: 100%;
+}
+
+.nav-toggle .nav-toggle-bar { margin-top: 0; }
+
+.nav-toggle .nav-toggle-bar::after { margin-top: 0.8rem; }
+
+.nav-toggle .nav-toggle-bar::before { margin-top: -0.8rem; }
+
+.nav-toggle.expanded .nav-toggle-bar { background: transparent; }
+
+.nav-toggle.expanded .nav-toggle-bar::after, .nav-toggle.expanded .nav-toggle-bar::before {
+  background: white;
+  margin-top: 0;
+}
+
+.nav-toggle.expanded .nav-toggle-bar::after {
+  -ms-transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.nav-toggle.expanded .nav-toggle-bar::before {
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+}
+/*content styling here*/
+
+.main-content{
+	width: 450px;
+	margin-top: 10em;
+    padding-left: 73px;
+}
+
+h1{
+	font-family:"Proxima Nova";
+	font-size: 65px;
+	font-weight: bold;
+	color: rgba(255,255,255, 0.6);
+
+
+}
+
+p{  
+	font-family:"Proxima Nova";
+	font-size: 1em;
+	color: rgba(255,255,255, 0.6);
+	width: 29em;
+    margin-left: 13px;
+}
+
+.cta{
+	font-family:"Proxima Nova";
+	background-color: #d04000;
+	font-size: 14px;
+	text-transform: uppercase;
+	border: 1px solid #d04000;
+  margin: 1em;
+  padding: 1em 2em;
+  color: rgba(255,255,255, 0.9);
+  font-weight: bold;
+	
+}
+
+
+/*footer styling here*/
+footer{
+	font-family:"Proxima Nova";
+	text-align: center;
+  color: rgba(255,255,255, 0.6);
+  margin-top: 1em;
+}
+/*  -------------------- Media Queries for responsive devices --------------- */
+
+/* Extra small devices (phones, 400px and down) */
+@media only screen and (max-width: 400px) {
+  body {
+  background-image: url("../images/Cellairis_DevTest_375x667-min.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+  }
+	
+	.logo_wrapper {
+float: left;
+  margin: 0;
+}
+
+  .fullscreenmenu li a {
+  font-family:"Proxima Nova";
+  visibility: inherit;
+  color: #ffffff;
+  font-size: 26px;
+  text-decoration: none;
+  font-weight: 100;
+  text-transform: uppercase;
+  line-height: 200%;
+  margin-top: 2em;
+}
+
+
+main{
+ width: 60%;
+	
+}
+  .site-container {
+    margin: 0 2em;
+	  clear: both;
+   } 
+
+   .main-content{
+    width: 270px;
+    margin-top: 10em;
+    padding: 20px 28px;
+    
+  }
+
+  h1{
+	font-family:"Proxima Nova"; 
+    font-size: 35px;
+    font-weight: bold;
+    color: rgba(255,255,255, 0.6);
+
+
+  }
+
+  p{
+	font-family:"Proxima Nova";
+    font-size: .75em;
+    color: rgba(255,255,255, 0.6);
+    line-height: 1.5;
+    width: 285px;
+    padding-bottom: 2em;
+
+    
+  }
+
+  footer{
+  font-family:"Proxima Nova";	  
+  text-align: left;
+  color: rgba(255,255,255, 0.6);
+  margin-top: 1.5em;
+  font-size: .85em;
+  margin-left: 32px;
+}
+}
+
+/* Small devices (portrait tablets up to 667px and up) */
+@media screen and (max-width: 667px) {
+  body {
+    background-image: url("../images/Cellairis_DevTest_375x667-min.png");
+    background-repeat: no-repeat;
+    height: 100vh;
+    margin: 0;
+  }
+
+main{
+ width: 270px;
+ clear: both;
+}
+  .site-container {
+    margin: 0 2em;
+   } 
+
+   .main-content{
+    width: 270px;
+    margin-top: 10em;
+    padding: 20px 28px;
+    
+  }
+
+  h1{
+	font-family:"Proxima Nova";
+    font-size: 35px;
+    font-weight: bold;
+    color: rgba(255,255,255, 0.6);
+
+
+  }
+
+  p{
+	font-family:"Proxima Nova";
+    font-size: .75em;
+    color: rgba(255,255,255, 0.6);
+    line-height: 1.5;
+    width: 285px;
+    padding-bottom: 2em;
+
+    
+  }
+
+  footer {
+  font-family:"Proxima Nova";	  
+  text-align: left;
+  color: rgba(255,255,255, 0.6);
+  margin-top: 1em;
+  font-size: .85em;
+  margin-left: 32px;
+  padding-bottom: 10px;
+ }
+}
+
+@media screen and (min-width: 667px) {
+	body{
+	background-image: url("../images/Cellairis_DevTest_1920-min.png");
+  }
+}
